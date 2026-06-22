@@ -212,7 +212,7 @@
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 7.5vw, 4rem);
+  font-size: clamp(1.65rem, 7vw, 4rem);
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.03em;
@@ -317,6 +317,8 @@
   border-radius: var(--radius);
   border-bottom: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
+  max-width: 380px;
+  margin: 0 auto;
 }
 
 .profile-card-body {
@@ -325,9 +327,9 @@
 
 .profile-photo {
   width: 100%;
-  height: clamp(240px, 62vw, 360px);
+  height: clamp(400px, 112vw, 480px);
   object-fit: cover;
-  object-position: center top;
+  object-position: center 38%;
   display: block;
 }
 
@@ -1754,6 +1756,7 @@
 
   .profile-photo {
     height: 360px;
+    object-position: center 32%;
   }
 
   .hero-greeting {
@@ -1846,6 +1849,11 @@
 }
 
 @media (max-width: 480px) {
+  .profile-photo {
+    height: clamp(420px, 118vw, 500px);
+    object-position: center 40%;
+  }
+
   .bento-headline {
     font-size: clamp(1.5rem, 7vw, 2rem);
     margin-bottom: 28px;
