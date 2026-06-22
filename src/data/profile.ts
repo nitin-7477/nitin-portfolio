@@ -406,6 +406,25 @@ export const profile = {
         website: "#",
       },
     },
+    {
+      name: "Food Rush",
+      type: "web",
+      tech: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "MSW",
+        "Zustand",
+        "Expo Router",
+      ],
+      description:
+        "Investor-ready proposal website for a food delivery MVP — covering technical stack, 2-week sprint plan, color palette, typography, process, system architecture, and deliverables.",
+      links: {
+        playStore: "#",
+        appStore: "#",
+        website: "https://food-rush.pages.dev/",
+      },
+    },
   ],
 
   education: [

@@ -354,6 +354,10 @@ function MoreProjects() {
         <div className="section-header">
           <div className="section-label">More Projects</div>
           <h2 className="section-title">Other apps in my portfolio</h2>
+          <p className="section-subtitle">
+            More shipped mobile apps and web projects — including proposal sites,
+            platforms, and product documentation.
+          </p>
         </div>
         <div className="projects-grid">
           {profile.projects
@@ -363,6 +367,9 @@ function MoreProjects() {
             )
             .map((project) => (
               <article key={project.name} className="project-card glass-card">
+                {"type" in project && project.type === "web" && (
+                  <span className="project-type">Web · Proposal</span>
+                )}
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
                 <div className="project-tech">
@@ -371,28 +378,44 @@ function MoreProjects() {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a
-                    href={project.links.playStore}
-                    className={
-                      project.links.playStore === "#" ? "disabled" : ""
-                    }
-                  >
-                    Play Store {project.links.playStore === "#" && "(soon)"}
-                  </a>
-                  <a
-                    href={project.links.appStore}
-                    className={project.links.appStore === "#" ? "disabled" : ""}
-                  >
-                    App Store {project.links.appStore === "#" && "(soon)"}
-                  </a>
-                  {project.links.website !== "#" && (
+                  {"type" in project && project.type === "web" ? (
                     <a
                       href={project.links.website}
+                      className="project-link-primary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Website
+                      View Proposal →
                     </a>
+                  ) : (
+                    <>
+                      <a
+                        href={project.links.playStore}
+                        className={
+                          project.links.playStore === "#" ? "disabled" : ""
+                        }
+                      >
+                        Play Store{" "}
+                        {project.links.playStore === "#" && "(soon)"}
+                      </a>
+                      <a
+                        href={project.links.appStore}
+                        className={
+                          project.links.appStore === "#" ? "disabled" : ""
+                        }
+                      >
+                        App Store {project.links.appStore === "#" && "(soon)"}
+                      </a>
+                      {project.links.website !== "#" && (
+                        <a
+                          href={project.links.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Website
+                        </a>
+                      )}
+                    </>
                   )}
                 </div>
               </article>
