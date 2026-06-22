@@ -59,3 +59,11 @@ jobs:
             git commit -m "Deploy site to docs [skip ci]"
             git push
           fi
+
+      - name: Publish to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true
