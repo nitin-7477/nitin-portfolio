@@ -1,7 +1,9 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { profile } from "./data/profile";
+import uiShowcaseImage from "./assets/ui-showcase.png?url";
 import { CursorFollower } from "./components/CursorFollower";
 import { MobileDevHero } from "./components/MobileDevHero";
+import { ProjectPreview } from "./components/ProjectPreview";
 import { useInView } from "./hooks/useInView";
 import "./App.css";
 
@@ -272,18 +274,10 @@ function FeaturedWork() {
               className={`featured-item glass-card ${i % 2 === 1 ? "featured-reverse" : ""}`}
             >
               <div className="featured-visual">
-                <div className="featured-mockup">
-                  <div className="mockup-notch" />
-                  <div className="mockup-screen">
-                    <span className="mockup-icon">📱</span>
-                    <span className="mockup-name">{project.name}</span>
-                    <div className="mockup-tech">
-                      {project.tech.slice(0, 3).map((t) => (
-                        <span key={t}>{t}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <ProjectPreview
+                  imageUrl={project.imageUrl}
+                  label={`${project.name} preview`}
+                />
               </div>
               <div className="featured-content">
                 <span className="featured-category">{project.category}</span>
@@ -342,6 +336,32 @@ function FeaturedWork() {
             </article>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function UiShowcase() {
+  return (
+    <section className="section ui-showcase-section" id="ui-showcase">
+      <div className="container">
+        <div className="section-header section-header-center">
+          <div className="section-label">UI Showcase</div>
+          <h2 className="section-title">Mobile app design across industries</h2>
+          <p className="section-subtitle">
+            A visual spread of polished mobile UI concepts — ecommerce, healthcare,
+            travel, finance, learning, and food delivery.
+          </p>
+        </div>
+        <figure className="ui-showcase-frame glass-card">
+          <img
+            src={uiShowcaseImage}
+            alt="Mobile app UI showcase featuring ecommerce, medical, travel, finance, learning, and food delivery designs"
+            loading="lazy"
+            width={1536}
+            height={1024}
+          />
+        </figure>
       </div>
     </section>
   );
@@ -754,6 +774,7 @@ function App() {
         <Hero />
         <About />
         <FeaturedWork />
+        <UiShowcase />
         <MoreProjects />
         <FavoriteTools />
         <Journey />

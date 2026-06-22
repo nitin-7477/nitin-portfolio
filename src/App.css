@@ -899,65 +899,26 @@
 .featured-visual {
   display: flex;
   justify-content: center;
-}
-
-.featured-mockup {
-  width: 220px;
-  background: linear-gradient(145deg, #1e293b, #334155);
-  border-radius: 28px;
-  padding: 12px;
-  box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
-}
-
-.mockup-notch {
-  width: 60px;
-  height: 6px;
-  background: #475569;
-  border-radius: 3px;
-  margin: 0 auto 10px;
-}
-
-.mockup-screen {
-  background: linear-gradient(160deg, var(--crystal-50), var(--crystal-100));
-  border-radius: 18px;
-  padding: 32px 20px;
-  text-align: center;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  width: 100%;
 }
 
-.mockup-icon {
-  font-size: 40px;
+.featured-preview {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 4px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(14, 165, 233, 0.14);
 }
 
-.mockup-name {
-  font-family: var(--font-display);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.mockup-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.mockup-tech span {
-  font-size: 10px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 4px 8px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 6px;
-  color: var(--crystal-700);
+.featured-preview-art {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .featured-category {
@@ -1043,6 +1004,31 @@
   font-weight: 500;
   color: var(--text-muted);
   font-style: italic;
+}
+
+/* ── UI Showcase ── */
+.ui-showcase-section {
+  padding-top: 48px;
+}
+
+.ui-showcase-frame {
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: calc(var(--radius) + 6px);
+}
+
+.ui-showcase-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+}
+
+@media (min-width: 901px) {
+  .ui-showcase-frame {
+    padding: 14px;
+  }
 }
 
 /* ── Tools Cloud ── */

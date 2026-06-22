@@ -1,3 +1,8 @@
+import medicalAppPreview from "../assets/projects/medical-app.png?url";
+import ecommercePreview from "../assets/projects/ecommerce.png?url";
+import betninjaPreview from "../assets/projects/betninja.png?url";
+import motorepPreview from "../assets/projects/motorep.png?url";
+
 export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 export const profile = {
@@ -277,6 +282,7 @@ export const profile = {
     {
       name: "Medical Community App",
       category: "Healthcare · 1M+ Downloads",
+      imageUrl: medicalAppPreview,
       tech: ["React Native", "Expo", "Firebase", "Mixpanel"],
       story: `The flagship project I'm currently working on at Primotech — a large-scale medical platform used by doctors and healthcare professionals across India. I led the Expo SDK migration to unlock advanced native integrations and built CI/CD pipelines for automated builds and over-the-air updates.`,
       highlights: [
@@ -295,6 +301,7 @@ export const profile = {
     {
       name: "Fritha & GwaliorBasket",
       category: "Ecommerce · Full Stack",
+      imageUrl: ecommercePreview,
       tech: ["React Native", "Next.js", "GraphQL", "Razorpay"],
       story: `Built two complete ecommerce experiences from scratch — product browsing, cart, checkout, and order management on mobile, paired with a Next.js admin panel for inventory and order control. GraphQL kept data fetching efficient across both apps.`,
       highlights: [
@@ -313,6 +320,7 @@ export const profile = {
     {
       name: "BetNinja",
       category: "Real-Time · Gaming",
+      imageUrl: betninjaPreview,
       tech: ["React Native", "Socket.io", "Razorpay"],
       story: `A real-time betting platform where timing is everything. Multiple game durations, a wallet system for deposits and withdrawals, and live updates powered by Socket.io — all wrapped in a React Native app that had to feel instant on every interaction.`,
       highlights: [
@@ -331,6 +339,7 @@ export const profile = {
     {
       name: "MotoRep",
       category: "On-Demand Services",
+      imageUrl: motorepPreview,
       tech: ["React Native", "Node.js", "Razorpay"],
       story: `MotoRep is a doorstep two-wheeler servicing platform focused on smooth booking flows, verified mechanics, transparent pricing, and secure payments. I worked on the mobile experience for service discovery, booking, and location-aware flows that make bike maintenance feel effortless.`,
       highlights: [
