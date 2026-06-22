@@ -432,38 +432,233 @@
   border-radius: 100px;
 }
 
-/* ── About profile strip ── */
-.about-profile-strip {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
+/* ── Bento grid ── */
+.bento-headline {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-align: center;
   margin-bottom: 40px;
+  color: var(--text-primary);
 }
 
-.about-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-bottom: 72px;
+}
+
+.bento-card {
+  padding: 24px;
+  overflow: hidden;
+}
+
+.bento-featured {
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+.bento-featured-image {
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(180deg, #7dd3fc, #bae6fd);
+  max-height: 280px;
+}
+
+.bento-featured-image img {
+  width: 100%;
+  height: 280px;
   object-fit: cover;
-  object-position: center 20%;
-  border: 3px solid white;
-  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.15);
-  flex-shrink: 0;
+  object-position: center top;
+  display: block;
 }
 
-.about-profile-info h3 {
+.bento-featured-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  padding: 0 24px 24px;
+}
+
+.bento-featured-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.bento-stack {
+  background: linear-gradient(145deg, #1e293b, #334155);
+  border-color: rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+.bento-stack-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bento-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.bento-stack-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+}
+
+.bento-metrics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bento-metric-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.bento-metric-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.bento-mentality h3 {
   font-family: var(--font-display);
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 2px;
+  margin-bottom: 10px;
 }
 
-.about-profile-info p {
+.bento-mentality p {
   font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.bento-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bento-pill {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(186, 230, 253, 0.35);
+  border-radius: 100px;
+}
+
+.bento-pill-active {
+  color: #78350f;
+  background: #fde68a;
+}
+
+.bento-visual {
+  padding: 0;
+  min-height: 140px;
+}
+
+.bento-visual-inner {
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: linear-gradient(
+    160deg,
+    #bae6fd 0%,
+    #7dd3fc 40%,
+    #e0f2fe 100%
+  );
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 24px;
+}
+
+.bento-visual-icon {
+  font-size: 36px;
+  margin-bottom: 4px;
+}
+
+.bento-visual-inner p {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.bento-visual-sub {
+  font-size: 12px;
   color: var(--text-muted);
 }
 
+.about-below {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .bento-featured {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  .bento-visual {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-featured,
+  .bento-visual {
+    grid-column: auto;
+  }
+}
+
+/* ── About profile strip (removed) ── */
 /* ── Custom Cursor ── */
 .cursor-dot,
 .cursor-ring {

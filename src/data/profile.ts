@@ -30,6 +30,28 @@ export const profile = {
 
   about: `React Native Developer with 3.5+ years of experience building scalable, high-performance cross-platform mobile applications for Android and iOS. Skilled in React Native CLI, Expo, and Expo migration, with strong expertise in integrating third-party SDKs, Firebase services, analytics tools, and payment gateways. Experienced in full-stack development using Node.js and Express.js with MongoDB.`,
 
+  bento: {
+    headline: "Let's build it together.",
+    featured: {
+      image: "nitin-profile.png",
+      title: "Mobile development",
+      text: "goes beyond shipping features — it's about embedding performance, polish, and reliability into every screen to craft apps people actually love using.",
+    },
+    stack: {
+      label: "Core stack I ship with",
+      items: ["React Native", "Expo", "TypeScript", "Firebase", "Reanimated 4"],
+    },
+    metrics: [
+      { value: "10+", label: "Apps published on stores" },
+      { value: "1M+", label: "Users reached in production" },
+    ],
+    mentality: {
+      title: "Mentality",
+      text: "Continuously evolving post-launch — guided by analytics, crash reports, and user feedback to keep every release focused and sharp.",
+      pills: ["Build", "Ship", "Scale"],
+    },
+  },
+
   stats: [
     { label: "Years of Experience", value: "3.5+" },
     { label: "Apps Published", value: "10+" },

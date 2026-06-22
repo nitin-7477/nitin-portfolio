@@ -171,28 +171,69 @@ function Hero() {
 }
 
 function About() {
+  const { bento } = profile;
+
   return (
     <section className="section" id="about">
       <div className="container">
-        <div className="about-profile-strip glass-card">
-          <img
-            src={profile.photoUrl}
-            alt=""
-            className="about-avatar"
-            width={72}
-            height={72}
-          />
-          <div className="about-profile-info">
-            <h3>{profile.name}</h3>
-            <p>@{profile.handle}</p>
-          </div>
-          {profile.openToWork && (
-            <span className="open-to-work open-to-work-sm">Open to Work</span>
-          )}
+        <h2 className="bento-headline">{bento.headline}</h2>
+
+        <div className="bento-grid">
+          <article className="bento-card bento-featured glass-card">
+            <div className="bento-featured-image">
+              <img src={profile.photoUrl} alt={profile.name} />
+            </div>
+            <p className="bento-featured-text">
+              <strong>{bento.featured.title}</strong> {bento.featured.text}
+            </p>
+          </article>
+
+          <article className="bento-card bento-stack glass-card">
+            <span className="bento-stack-label">{bento.stack.label}</span>
+            <div className="bento-stack-grid">
+              {bento.stack.items.map((item) => (
+                <span key={item} className="bento-stack-cell">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <article className="bento-card bento-metrics glass-card">
+            {bento.metrics.map((m) => (
+              <div key={m.label} className="bento-metric">
+                <span className="bento-metric-value">{m.value}</span>
+                <span className="bento-metric-label">{m.label}</span>
+              </div>
+            ))}
+          </article>
+
+          <article className="bento-card bento-mentality glass-card">
+            <h3>{bento.mentality.title}</h3>
+            <p>{bento.mentality.text}</p>
+            <div className="bento-pills">
+              {bento.mentality.pills.map((pill, i) => (
+                <span
+                  key={pill}
+                  className={`bento-pill ${i === 0 ? "bento-pill-active" : ""}`}
+                >
+                  {pill}
+                </span>
+              ))}
+            </div>
+          </article>
+
+          <article className="bento-card bento-visual glass-card">
+            <div className="bento-visual-inner">
+              <span className="bento-visual-icon">📱</span>
+              <p>iOS & Android</p>
+              <span className="bento-visual-sub">Cross-platform by default</span>
+            </div>
+          </article>
         </div>
 
-        <div className="section-header">
-          <div className="section-label">About</div>
+        <div className="section-header about-below">
+          <div className="section-label">Expertise</div>
           <h2 className="section-title">What I do with React Native</h2>
           <p className="section-subtitle">{profile.about}</p>
         </div>
