@@ -27,9 +27,10 @@
   --font-display: "Outfit", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
 
-  --nav-height: 72px;
-  --section-gap: 120px;
+  --nav-height: 64px;
+  --section-gap: 72px;
   --container: 1100px;
+  --container-padding: 16px;
   --radius: 16px;
   --radius-sm: 10px;
 
@@ -87,7 +88,7 @@ button {
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--container-padding);
 }
 
 .section-label {
@@ -135,9 +136,16 @@ button {
   box-shadow: var(--glass-shadow);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   :root {
-    --section-gap: 80px;
-    --nav-height: 64px;
+    --nav-height: 72px;
+    --section-gap: 100px;
+    --container-padding: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-gap: 120px;
   }
 }
