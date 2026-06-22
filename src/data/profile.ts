@@ -285,7 +285,12 @@ export const profile = {
         "Push notifications, force updates, and Google Ads integration",
         "Firebase Crashlytics & Mixpanel for real-time monitoring",
       ],
-      links: { playStore: "#", appStore: "#", label: "View on App Store" },
+      links: {
+        playStore: "#",
+        appStore: "#",
+        website: "#",
+        label: "View on App Store",
+      },
     },
     {
       name: "Fritha & GwaliorBasket",
@@ -298,7 +303,12 @@ export const profile = {
         "Razorpay payment integration for seamless checkout",
         "GraphQL API layer for optimized data loading",
       ],
-      links: { playStore: "#", appStore: "#", label: "View on Play Store" },
+      links: {
+        playStore: "#",
+        appStore: "#",
+        website: "#",
+        label: "View on Play Store",
+      },
     },
     {
       name: "BetNinja",
@@ -311,20 +321,31 @@ export const profile = {
         "Multiple game duration modes",
         "Low-latency UI optimized for live interactions",
       ],
-      links: { playStore: "#", appStore: "#", label: "View on Play Store" },
+      links: {
+        playStore: "#",
+        appStore: "#",
+        website: "#",
+        label: "View on Play Store",
+      },
     },
     {
-      name: "Bike Servicing App",
+      name: "MotoRep",
       category: "On-Demand Services",
       tech: ["React Native", "Node.js", "Razorpay"],
-      story: `An on-demand bike servicing platform — users book repairs, battery replacements, and inspections while mechanics get real-time assignments through an admin panel. OTP-based service verification and Razorpay payments keep every transaction secure.`,
+      story: `MotoRep is a doorstep two-wheeler servicing platform focused on smooth booking flows, verified mechanics, transparent pricing, and secure payments. I worked on the mobile experience for service discovery, booking, and location-aware flows that make bike maintenance feel effortless.`,
       highlights: [
-        "Booking flow for repairs, battery, inspections & insurance",
-        "OTP-based service start and completion verification",
-        "Real-time mechanic tracking for users and admins",
-        "Published on both Play Store and App Store",
+        "Doorstep servicing flows for repairs, battery support, and maintenance",
+        "Location-aware booking and profile management improvements",
+        "Secure payment and service experience for everyday riders",
+        "Published on Google Play with ongoing product updates",
       ],
-      links: { playStore: "#", appStore: "#", label: "View on Play Store" },
+      links: {
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.motorep&hl=en_IN",
+        appStore: "#",
+        website: "#",
+        label: "View on Play Store",
+      },
     },
   ],
 
@@ -334,42 +355,56 @@ export const profile = {
       tech: ["React Native", "Firebase", "Mixpanel", "Expo"],
       description:
         "Large-scale medical app with 1M+ downloads. Features case sharing, communities, quizzes, push notifications, OTA updates, and ad integrations.",
-      links: { playStore: "#", appStore: "#" },
+      links: { playStore: "#", appStore: "#", website: "#" },
     },
     {
-      name: "HRMS App",
+      name: "QHR",
       tech: ["React Native", "TypeScript", "Firebase"],
       description:
-        "HR management system with attendance, leave management, selfie punch-in/out, and location tracking.",
-      links: { playStore: "#", appStore: "#" },
+        "HRMS platform for employee management, attendance with selfie and geo-location verification, and streamlined leave workflows.",
+      links: {
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.Qhr&hl=en_IN",
+        appStore: "#",
+        website: "#",
+      },
     },
     {
       name: "GKEsports",
       tech: ["React Native", "Cashfree"],
       description:
-        "Esports platform for joining tournaments and winning real money with integrated payment gateway.",
-      links: { playStore: "#", appStore: "#" },
+        "Tournament hosting and esports platform with real-money gameplay, instant withdrawals, live support, and payment integrations.",
+      links: {
+        playStore: "#",
+        appStore: "#",
+        website: "https://esports.gkmsinfotech.com/",
+      },
     },
     {
       name: "Fritha & GwaliorBasket",
       tech: ["React Native", "Next.js", "Redux", "GraphQL", "Razorpay"],
       description:
         "Two ecommerce apps with cart, checkout, and order management. Admin panel built in Next.js with GraphQL.",
-      links: { playStore: "#", appStore: "#" },
+      links: { playStore: "#", appStore: "#", website: "#" },
     },
     {
       name: "BetNinja",
       tech: ["React Native", "Socket.io", "Razorpay"],
       description:
         "Real-time betting app with multiple game durations, wallet system, and live updates via Socket.io.",
-      links: { playStore: "#", appStore: "#" },
+      links: { playStore: "#", appStore: "#", website: "#" },
     },
     {
-      name: "Bike Servicing App",
+      name: "MotoRep",
       tech: ["React Native", "Node.js", "Razorpay"],
       description:
-        "Bike servicing platform for repairs, battery replacement, and insurance with OTP verification and mechanic tracking.",
-      links: { playStore: "#", appStore: "#" },
+        "Doorstep bike servicing platform for repairs, maintenance, and battery support with location-based booking and secure payments.",
+      links: {
+        playStore:
+          "https://play.google.com/store/apps/details?id=com.motorep&hl=en_IN",
+        appStore: "#",
+        website: "#",
+      },
     },
   ],
 

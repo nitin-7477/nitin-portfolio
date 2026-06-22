@@ -320,8 +320,19 @@ function FeaturedWork() {
                       View on App Store
                     </a>
                   )}
+                  {project.links.website !== "#" && (
+                    <a
+                      href={project.links.website}
+                      className="btn-secondary btn-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit Website
+                    </a>
+                  )}
                   {project.links.playStore === "#" &&
-                    project.links.appStore === "#" && (
+                    project.links.appStore === "#" &&
+                    project.links.website === "#" && (
                       <span className="link-soon">
                         Store links coming soon
                       </span>
@@ -374,6 +385,15 @@ function MoreProjects() {
                   >
                     App Store {project.links.appStore === "#" && "(soon)"}
                   </a>
+                  {project.links.website !== "#" && (
+                    <a
+                      href={project.links.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Website
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
