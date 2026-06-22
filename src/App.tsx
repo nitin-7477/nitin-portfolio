@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { profile } from "./data/profile";
 import { CursorFollower } from "./components/CursorFollower";
+import { MobileDevHero } from "./components/MobileDevHero";
 import { useInView } from "./hooks/useInView";
 import "./App.css";
 
@@ -181,7 +182,7 @@ function About() {
         <div className="bento-grid">
           <article className="bento-card bento-featured glass-card">
             <div className="bento-featured-image">
-              <img src={profile.photoUrl} alt={profile.name} />
+              <MobileDevHero />
             </div>
             <p className="bento-featured-text">
               <strong>{bento.featured.title}</strong> {bento.featured.text}

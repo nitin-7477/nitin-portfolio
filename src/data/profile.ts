@@ -1,4 +1,4 @@
-const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 export const profile = {
   name: "Nitin Gautam",
@@ -33,7 +33,6 @@ export const profile = {
   bento: {
     headline: "Let's build it together.",
     featured: {
-      image: "nitin-profile.png",
       title: "Mobile development",
       text: "goes beyond shipping features — it's about embedding performance, polish, and reliability into every screen to craft apps people actually love using.",
     },

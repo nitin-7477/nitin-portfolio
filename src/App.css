@@ -471,11 +471,10 @@
   max-height: 280px;
 }
 
-.bento-featured-image img {
+.bento-featured-image svg,
+.bento-featured-art {
   width: 100%;
   height: 280px;
-  object-fit: cover;
-  object-position: center top;
   display: block;
 }
 
