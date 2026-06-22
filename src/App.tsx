@@ -645,7 +645,14 @@ function Footer() {
       <div className="container">
         <p>
           © {new Date().getFullYear()} <span>{profile.name}</span> — React
-          Native Developer. Built with React & Vite.
+          Native Developer ·{" "}
+          <a
+            href="https://nitin-7477.github.io/nitin-portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            nitin-7477.github.io
+          </a>
         </p>
       </div>
     </footer>

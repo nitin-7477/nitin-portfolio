@@ -7,8 +7,8 @@ export const profile = {
   openToWork: true,
   photoUrl: asset("nitin-profile.png"),
   tagline:
-    "I specialize in building scalable, high-performance cross-platform mobile applications for Android and iOS.",
-  intro: `I currently live in Gwalior, Madhya Pradesh and I'm open to new opportunities. Whether it's a full-time role or a freelance project — I'd love to connect and build something great together.`,
+    "Building scalable, high-performance React Native apps for Android & iOS — 3.5+ years in production.",
+  intro: `Based in Gwalior, India. I ship mobile apps used by 1M+ users — from healthcare platforms to ecommerce and real-time apps. Open to full-time roles and freelance projects.`,
   location: "Gwalior, Madhya Pradesh",
   country: "India",
   experienceIncludes: [
