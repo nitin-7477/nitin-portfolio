@@ -1,9 +1,11 @@
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 export const profile = {
   name: "Nitin Gautam",
   handle: "nitin-gautam",
   title: "React Native Developer",
   openToWork: true,
-  photoUrl: "/nitin-profile.png",
+  photoUrl: asset("nitin-profile.png"),
   tagline:
     "I specialize in building scalable, high-performance cross-platform mobile applications for Android and iOS.",
   intro: `I currently live in Gwalior, Madhya Pradesh and I'm open to new opportunities. Whether it's a full-time role or a freelance project — I'd love to connect and build something great together.`,
@@ -23,7 +25,7 @@ export const profile = {
   phone: "+91-7477235745",
   linkedin: "https://www.linkedin.com/in/nitin-gautam-286b12291/",
   github: "https://github.com/nitin-7477",
-  resumeUrl: "/Nitin_Gautam_Resume.pdf",
+  resumeUrl: asset("Nitin_Gautam_Resume.pdf"),
   yearsOfExperience: "3.5+",
 
   about: `React Native Developer with 3.5+ years of experience building scalable, high-performance cross-platform mobile applications for Android and iOS. Skilled in React Native CLI, Expo, and Expo migration, with strong expertise in integrating third-party SDKs, Firebase services, analytics tools, and payment gateways. Experienced in full-stack development using Node.js and Express.js with MongoDB.`,
